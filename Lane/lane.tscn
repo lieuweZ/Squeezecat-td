@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://dqnrybve8so0p"]
+
+[ext_resource type="Script" uid="uid://jllwtxlk0mki" path="res://Lane/Lane.cs" id="1_yahet"]
+
+[node name="Lane0" type="Node2D" unique_id=1430538051]
+script = ExtResource("1_yahet")
+
+[node name="Ground" type="Polygon2D" parent="." unique_id=961992464]
+polygon = PackedVector2Array(0, 0, 1000, 0, 1000, 100, 0, 100)
+
+[node name="SpawnPoint" type="Marker2D" parent="." unique_id=56317561]
+position = Vector2(1000, 50)
+
+[node name="EndPoint" type="Marker2D" parent="." unique_id=1539452429]
+position = Vector2(0, 50)

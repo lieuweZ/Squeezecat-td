@@ -1,29 +1,23 @@
 [gd_scene format=3 uid="uid://boj5nq28gj3d2"]
 
+[ext_resource type="PackedScene" uid="uid://dqnrybve8so0p" path="res://Lane/lane.tscn" id="1_acdnu"]
+
 [node name="Level" type="Node2D" unique_id=1057485996]
 
 [node name="Lanes" type="Node2D" parent="." unique_id=23395312]
 
-[node name="Lane0" type="Node2D" parent="Lanes" unique_id=119589307]
+[node name="Lane0" parent="Lanes" unique_id=1430538051 instance=ExtResource("1_acdnu")]
 position = Vector2(0, 100)
 
-[node name="Polygon2D" type="Polygon2D" parent="Lanes/Lane0" unique_id=2132855219]
-polygon = PackedVector2Array(0, 0, 1000, 0, 1000, 100, 0, 100)
-
-[node name="Lane1" type="Node2D" parent="Lanes" unique_id=1568709344]
+[node name="Lane1" parent="Lanes" unique_id=520979318 instance=ExtResource("1_acdnu")]
+modulate = Color(1, 0, 1, 1)
 position = Vector2(0, 200)
+LaneIndex = 1
 
-[node name="Polygon2D" type="Polygon2D" parent="Lanes/Lane1" unique_id=1291237596]
-color = Color(1, 0, 1, 1)
-polygon = PackedVector2Array(0, 0, 1000, 0, 1000, 100, 0, 100)
-
-[node name="Lane2" type="Node2D" parent="Lanes" unique_id=725884300]
-position = Vector2(0, 100)
-
-[node name="Polygon2D" type="Polygon2D" parent="Lanes/Lane2" unique_id=1184517293]
-position = Vector2(0, 200)
-color = Color(0, 1, 1, 1)
-polygon = PackedVector2Array(0, 0, 1000, 0, 1000, 100, 0, 100)
+[node name="Lane2" parent="Lanes" unique_id=1559095183 instance=ExtResource("1_acdnu")]
+modulate = Color(0, 1, 1, 1)
+position = Vector2(0, 300)
+LaneIndex = 2
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=687822281]
 anchor_mode = 0

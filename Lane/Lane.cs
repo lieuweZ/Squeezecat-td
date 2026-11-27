@@ -1,5 +1,4 @@
 using Godot;
-using System;
 
 public partial class Lane : Node2D
 {
@@ -7,6 +6,7 @@ public partial class Lane : Node2D
 
 	public Vector2 SpawnPosition => _spawnPoint.GlobalPosition;
 	public Vector2 EndPosition => _endPoint.GlobalPosition;
+	
 
 	private Marker2D _spawnPoint;
 	private Marker2D _endPoint;
@@ -15,5 +15,13 @@ public partial class Lane : Node2D
 	{
 		_spawnPoint = GetNode<Marker2D>("SpawnPoint");
 		_endPoint = GetNode<Marker2D>("EndPoint");
+	}
+	public Enemy SpawnEnemy(PackedScene enemyScene)
+	{
+		var enemy = enemyScene.Instantiate<Enemy>();
+		AddChild(enemy);
+		enemy.GlobalPosition = SpawnPosition;
+		enemy.StartMoving(EndPosition);
+		return enemy;
 	}
 }

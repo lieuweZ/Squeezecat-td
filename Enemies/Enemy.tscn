@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://cdmumed16d2e7"]
+
+[ext_resource type="Script" uid="uid://dlyhu05g7fntf" path="res://Enemies/Enemy.cs" id="1_bkvnc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0gilx"]
+size = Vector2(40, 40)
+
+[node name="Enemy" type="Area2D" unique_id=1189896861]
+scale = Vector2(1.045, 1)
+script = ExtResource("1_bkvnc")
+
+[node name="Body" type="Polygon2D" parent="." unique_id=98169131]
+color = Color(1, 0, 0, 1)
+polygon = PackedVector2Array(-20, -20, 20, -20, 20, 20, -20, 20)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2024447966]
+scale = Vector2(1.0000002, 1)
+shape = SubResource("RectangleShape2D_0gilx")

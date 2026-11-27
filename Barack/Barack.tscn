@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://jn5xhaveteeb"]
+
+[ext_resource type="Script" uid="uid://lyoj3jm30u77" path="res://Barack/Barack.cs" id="1_barack"]
+
+[node name="Barack" type="Node2D" unique_id=732422983]
+script = ExtResource("1_barack")
+
+[node name="Body" type="Polygon2D" parent="." unique_id=1458109145]
+visibility_layer = 2
+color = Color(0.36402577, 0.16200602, 0, 1)
+polygon = PackedVector2Array(0, 0, 32, 0, 32, 96, 0, 96)

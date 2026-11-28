@@ -1,19 +1,26 @@
 [gd_scene format=3 uid="uid://cdmumed16d2e7"]
 
 [ext_resource type="Script" uid="uid://cw618g6w4tkt4" path="res://Enemies/Enemy.cs" id="1_bkvnc"]
+[ext_resource type="Resource" uid="uid://w7fcih4a1n0l" path="res://Enemies/Stats/BasicEnemyStats.tres" id="2_4isyn"]
+[ext_resource type="Texture2D" uid="uid://y0qpkf8kycq1" path="res://Enemies/tile_0121.png" id="3_wdetw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0gilx"]
 size = Vector2(40, 40)
 
 [node name="Enemy" type="Area2D" unique_id=1189896861]
-scale = Vector2(1.045, 1)
 script = ExtResource("1_bkvnc")
-Speed = 120.0
+Stats = ExtResource("2_4isyn")
 
 [node name="Body" type="Polygon2D" parent="." unique_id=98169131]
+visible = false
 color = Color(1, 0, 0, 1)
 polygon = PackedVector2Array(-20, -20, 20, -20, 20, 20, -20, 20)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2024447966]
 scale = Vector2(1.0000002, 1)
 shape = SubResource("RectangleShape2D_0gilx")
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=174634771]
+scale = Vector2(2, 2)
+texture = ExtResource("3_wdetw")
+flip_h = true

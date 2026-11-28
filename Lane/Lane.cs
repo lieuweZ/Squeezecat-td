@@ -2,7 +2,7 @@ using Godot;
 
 public partial class Lane : Node2D
 {
-	[Signal] public delegate void BarricadeDestroyedEventHandler(Lane lane);
+	[Signal] public delegate void BarrackDestroyedEventHandler(Lane lane);
 	[Export] public int LaneIndex { get; set; }
 
 	public Vector2 SpawnPosition => _spawnPoint.GlobalPosition;
@@ -38,6 +38,6 @@ public partial class Lane : Node2D
 
 	private void OnBarackDestroyed(Barack barack)
 	{
-		EmitSignal(SignalName.BarricadeDestroyed, this);
+		EmitSignal(SignalName.BarrackDestroyed, this);
 	}
 }

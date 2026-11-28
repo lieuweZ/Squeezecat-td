@@ -7,10 +7,10 @@ public partial class Level : Node2D
 	public delegate void GameOverEventHandler();
 
 	[Export] private PackedScene _enemyScene;
-	[Export] private int _destroyedBarricadesToLose = 2;
+	[Export] private int _destroyedBarracksToLose = 2;
 
 	private Lane[] _lanes;
-	private int _destroyedBarricades;
+	private int _destroyedBarracks;
 	private bool _isGameOver;
 
 	public override void _Ready()
@@ -19,16 +19,16 @@ public partial class Level : Node2D
 
 		foreach (Lane lane in _lanes)
 		{
-			lane.BarricadeDestroyed += OnBarricadeDestroyed;
+			lane.BarrackDestroyed += OnBarrackDestroyed;
 			lane.SpawnEnemy(_enemyScene);
 		}
 	}
 
-	private void OnBarricadeDestroyed(Lane lane)
+	private void OnBarrackDestroyed(Lane lane)
 	{
-		_destroyedBarricades++;
+		_destroyedBarracks++;
 
-		if (_isGameOver || _destroyedBarricades < _destroyedBarricadesToLose)
+		if (_isGameOver || _destroyedBarracks < _destroyedBarracksToLose)
 			return;
 
 		_isGameOver = true;

@@ -1,11 +1,11 @@
 [gd_resource type="Resource" script_class="EnemyStats" format=3 uid="uid://buewslchiqaja"]
 
-[ext_resource type="Texture2D" uid="uid://y0qpkf8kycq1" path="res://Enemies/tile_0121.png" id="1_1brsk"]
+[ext_resource type="Texture2D" uid="uid://cpyiisc8btxv2" path="res://Sprites/ToughEnemy.png" id="1_1brsk"]
 [ext_resource type="Script" uid="uid://dxi2ewkiurpg7" path="res://Enemies/EnemyStats.cs" id="1_qd2co"]
 
 [resource]
 script = ExtResource("1_qd2co")
-Speed = 120.0
+Speed = 60.0
 MaxHealth = 3
 Texture = ExtResource("1_1brsk")
 metadata/_custom_type_script = "uid://dxi2ewkiurpg7"

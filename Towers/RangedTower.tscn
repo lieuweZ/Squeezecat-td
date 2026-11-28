@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://b7rhoxco0giya"]
+
+[ext_resource type="Script" uid="uid://bddmpbq2d57sr" path="res://Towers/RangedTower.cs" id="1_tnutk"]
+[ext_resource type="Script" uid="uid://co6m657r3jjx2" path="res://Components/Health.cs" id="1_y5oao"]
+[ext_resource type="PackedScene" uid="uid://bhfamlovhemn8" path="res://Projectile/Projectile.tscn" id="2_kxm24"]
+[ext_resource type="Texture2D" uid="uid://cahw5yqr11x72" path="res://Sprites/RangedTower.png" id="4_5qgw4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lssxd"]
+size = Vector2(32, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tnutk"]
+size = Vector2(300, 32)
+
+[node name="RangedTower" type="Area2D" unique_id=1873294382]
+collision_layer = 4
+collision_mask = 0
+script = ExtResource("1_tnutk")
+_projectileScene = ExtResource("2_kxm24")
+
+[node name="Body" type="Polygon2D" parent="." unique_id=1084470199]
+visible = false
+polygon = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=521741946]
+shape = SubResource("RectangleShape2D_lssxd")
+
+[node name="Health" type="Node" parent="." unique_id=544091879]
+script = ExtResource("1_y5oao")
+
+[node name="Range" type="Area2D" parent="." unique_id=532159073]
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Range" unique_id=2039130348]
+position = Vector2(166, 0)
+shape = SubResource("RectangleShape2D_tnutk")
+
+[node name="Muzzle" type="Marker2D" parent="." unique_id=1686437449]
+position = Vector2(10, 8)
+
+[node name="FireTimer" type="Timer" parent="." unique_id=551059683]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1569113835]
+scale = Vector2(2, 2)
+texture = ExtResource("4_5qgw4")

@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://jllwtxlk0mki" path="res://Lane/Lane.cs" id="1_yahet"]
 [ext_resource type="PackedScene" uid="uid://jn5xhaveteeb" path="res://Barack/Barack.tscn" id="2_4q8ld"]
-[ext_resource type="Texture2D" uid="uid://d2unwicca6djv" path="res://tiles.png" id="3_a1w32"]
+[ext_resource type="Texture2D" uid="uid://d2unwicca6djv" path="res://Sprites/tiles.png" id="3_a1w32"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_e64v4"]
 texture = ExtResource("3_a1w32")
@@ -143,7 +143,7 @@ tile_map_data = PackedByteArray("AAAIAAIAAAAIAAQAAAAJAAIAAAAIAAQAAAAIAAEAAAAIAAQ
 tile_set = SubResource("TileSet_1m7rk")
 
 [node name="SpawnPoint" type="Marker2D" parent="." unique_id=56317561]
-position = Vector2(1000, 50)
+position = Vector2(986, 50)
 
 [node name="EndPoint" type="Marker2D" parent="." unique_id=1539452429]
 position = Vector2(50, 50)

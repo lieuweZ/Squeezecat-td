@@ -40,4 +40,12 @@ public partial class Lane : Node2D
 	{
 		EmitSignal(SignalName.BarrackDestroyed, this);
 	}
+	public RangedTower PlaceRangedTower(PackedScene rangedTowerScene, Vector2 globalPosition)
+	{
+		var rangedTower = rangedTowerScene.Instantiate<RangedTower>();
+		AddChild(rangedTower);
+		rangedTower.GlobalPosition = new Vector2(globalPosition.X, SpawnPosition.Y);
+		GD.Print($"Tower geplaatst op {rangedTower.GlobalPosition}");
+		return rangedTower;
+	}
 }

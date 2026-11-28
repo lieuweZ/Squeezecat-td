@@ -2,13 +2,14 @@
 
 [ext_resource type="Script" uid="uid://cw618g6w4tkt4" path="res://Enemies/Enemy.cs" id="1_bkvnc"]
 [ext_resource type="Resource" uid="uid://w7fcih4a1n0l" path="res://Enemies/Stats/BasicEnemyStats.tres" id="2_4isyn"]
-[ext_resource type="Texture2D" uid="uid://y0qpkf8kycq1" path="res://Enemies/tile_0121.png" id="3_wdetw"]
+[ext_resource type="Texture2D" uid="uid://cpyiisc8btxv2" path="res://Sprites/ToughEnemy.png" id="3_jcwuj"]
 [ext_resource type="Script" uid="uid://co6m657r3jjx2" path="res://Components/Health.cs" id="4_jcwuj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0gilx"]
 size = Vector2(40, 40)
 
 [node name="Enemy" type="Area2D" unique_id=1189896861]
+collision_mask = 0
 script = ExtResource("1_bkvnc")
 Stats = ExtResource("2_4isyn")
 
@@ -23,7 +24,7 @@ shape = SubResource("RectangleShape2D_0gilx")
 
 [node name="Sprite" type="Sprite2D" parent="." unique_id=174634771]
 scale = Vector2(2, 2)
-texture = ExtResource("3_wdetw")
+texture = ExtResource("3_jcwuj")
 flip_h = true
 
 [node name="Health" type="Node" parent="." unique_id=29631604]

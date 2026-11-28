@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://bhfamlovhemn8"]
+
+[ext_resource type="Script" uid="uid://c6bkkffg3xx8o" path="res://Projectile/Projectile.cs" id="1_eac16"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eac16"]
+size = Vector2(32, 8)
+
+[node name="Projectile" type="Area2D" unique_id=1517913923]
+collision_layer = 2
+script = ExtResource("1_eac16")
+
+[node name="Polygon2D" type="Polygon2D" parent="." unique_id=1223196457]
+polygon = PackedVector2Array(-16, -4, 16, -4, 16, 4, -16, 4)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=805304617]
+shape = SubResource("RectangleShape2D_eac16")

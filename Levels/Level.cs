@@ -8,6 +8,7 @@ public partial class Level : Node2D
 
 	[Export] private PackedScene _enemyScene;
 	[Export] private int _destroyedBarracksToLose = 2;
+	[Export] private PackedScene _rangedTowerScene;
 
 	private Lane[] _lanes;
 	private int _destroyedBarracks;
@@ -21,6 +22,7 @@ public partial class Level : Node2D
 		{
 			lane.BarrackDestroyed += OnBarrackDestroyed;
 			lane.SpawnEnemy(_enemyScene);
+			lane.PlaceRangedTower(_rangedTowerScene, lane.GlobalPosition + new Vector2(50, 0));
 		}
 	}
 

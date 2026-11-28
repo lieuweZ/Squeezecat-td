@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://jn5xhaveteeb"]
 
 [ext_resource type="Script" uid="uid://lyoj3jm30u77" path="res://Barack/Barack.cs" id="1_barack"]
+[ext_resource type="Script" uid="uid://co6m657r3jjx2" path="res://Components/Health.cs" id="2_hqisk"]
 
 [node name="Barack" type="Node2D" unique_id=732422983]
 script = ExtResource("1_barack")
@@ -9,3 +10,6 @@ script = ExtResource("1_barack")
 visibility_layer = 2
 color = Color(0.36402577, 0.16200602, 0, 1)
 polygon = PackedVector2Array(0, 0, 32, 0, 32, 96, 0, 96)
+
+[node name="Health" type="Node" parent="." unique_id=1483218005]
+script = ExtResource("2_hqisk")
